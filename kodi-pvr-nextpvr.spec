@@ -1,6 +1,6 @@
-%global commit dd03d62adab4f07c1354652033dffa6da25ba9b7
+%global commit aba859e2c50bb2c0662f82e31e17958468bbfaef
 %global short_commit %(c=%{commit}; echo ${c:0:7})
-%global commit_date 20170324
+%global commit_date 20170802
 
 %global kodi_addon pvr.nextpvr
 %global kodi_version 17.0
@@ -9,7 +9,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        2.4.13
+Version:        2.4.15
 Release:        1%{?dist}
 Summary:        Kodi's NextPVR client addon
 
@@ -57,6 +57,9 @@ cp -p %{SOURCE1} .
 
 
 %changelog
+* Tue Oct 03 2017 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:2.4.15-1
+- Update to 2.4.15
+
 * Fri Apr 28 2017 Mohamed El Morabity <melmorabity@fedorapeople.org> - 1:2.4.13-1
 - Update to latest stable release for Kodi 17
 
