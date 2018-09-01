@@ -1,6 +1,6 @@
-%global commit aa1c8d2225b3b24881f0944d1d311923e820afe4
+%global commit 441eddef8a9d15d317db78b5927119d572aae9a0
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 20180205
+%global commitdate 20180825
 
 %global kodi_addon pvr.nextpvr
 %global kodi_version 18.0
@@ -9,8 +9,8 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        3.2.5
-Release:        2%{?dist}
+Version:        3.3.4
+Release:        1%{?dist}
 Summary:        NextPVR for Kodi
 
 License:        GPLv2+
@@ -24,7 +24,7 @@ BuildRequires:  kodi-platform-devel >= %{kodi_version}
 BuildRequires:  pkgconfig(tinyxml)
 BuildRequires:  platform-devel
 Requires:       kodi >= %{kodi_version}
-ExclusiveArch:  i686 x86_64
+ExclusiveArch:  i686 x86_64 aarch64
 
 %description
 %{summary}.
@@ -50,6 +50,10 @@ ExclusiveArch:  i686 x86_64
 
 
 %changelog
+* Sat Sep 01 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:3.3.4-1
+- Update to 3.3.4
+- Enable aarch64 build
+
 * Thu Jul 26 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1:3.2.5-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
