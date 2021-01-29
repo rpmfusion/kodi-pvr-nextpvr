@@ -6,7 +6,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        8.0.0
+Version:        8.2.0
 Release:        1%{?dist}
 Summary:        NextPVR for Kodi
 
@@ -46,6 +46,12 @@ ExcludeArch:    %{power64} ppc64le
 
 
 %changelog
+* Fri Jan 29 2021 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:8.2.0-1
+- Update to 8.2.0
+
+* Mon Nov 30 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:8.0.1-1
+- Update to 8.0.1
+
 * Mon Nov 16 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:8.0.0-1
 - Update to 8.0.0
 
